@@ -1,0 +1,380 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "CriptoYa API",
+    "version": "0.0.1",
+    "description": "API que brinda cotizaciones de criptomonedas de diferentes exchanges."
+  },
+  "servers": [
+    {
+      "url": "https://criptoya.com",
+      "description": "Producción"
+    }
+  ],
+  "paths": {
+    "/api/{exchange}/{coin}/{fiat}/{volumen}": {
+      "get": {
+        "operationId": "get-cotizacion-exchange",
+        "summary": "Cotización por exchange específico",
+        "tags": [
+          "Cotizaciones"
+        ],
+        "description": "Devuelve la cotización de un exchange específico.",
+        "parameters": [
+          {
+            "name": "exchange",
+            "in": "path",
+            "description": "Proveedor a consultar",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "argenbtc",
+                "banexcoin",
+                "belo",
+                "binance",
+                "binancep2p",
+                "bingxp2p",
+                "bitcointoyou",
+                "bitcointrade",
+                "bitgetp2p",
+                "bitmonedero",
+                "bitso",
+                "bitsoalpha",
+                "brasilbitcoin",
+                "buda",
+                "buenbit",
+                "bybit",
+                "bybitp2p",
+                "cocoscrypto",
+                "cryptomkt",
+                "decrypto",
+                "eldoradop2p",
+                "eluter",
+                "fiwind",
+                "flowbtc",
+                "foxbit",
+                "huobip2p",
+                "kriptonmarket",
+                "kucoinp2p",
+                "latamex",
+                "lemoncash",
+                "lemoncashp2p",
+                "letsbit",
+                "lnp2pbotp2p",
+                "mercadobitcoin",
+                "okexp2p",
+                "pagcripto",
+                "paxfulp2p",
+                "paydecep2p",
+                "pluscrypto",
+                "ripio",
+                "ripioexchange",
+                "saldo",
+                "satoshitango",
+                "syklop2p",
+                "tiendacrypto",
+                "trubit",
+                "trubitp2p",
+                "vibrant",
+                "x4t",
+                "xapobank"
+              ],
+              "example": "argenbtc"
+            }
+          },
+          {
+            "name": "coin",
+            "in": "path",
+            "description": "Cripto a operar",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "BTC",
+                "ETH",
+                "USDT",
+                "USDC",
+                "DAI",
+                "UXD",
+                "USDP",
+                "WLD",
+                "BNB",
+                "SOL",
+                "XRP",
+                "ADA",
+                "AVAX",
+                "DOGE",
+                "TRX",
+                "LINK",
+                "DOT",
+                "MATIC",
+                "SHIB",
+                "LTC",
+                "BCH",
+                "EOS",
+                "XLM",
+                "FTM",
+                "AAVE",
+                "UNI",
+                "ALGO",
+                "BAT",
+                "PAXG",
+                "CAKE",
+                "AXS",
+                "SLP",
+                "MANA",
+                "SAND",
+                "CHZ"
+              ],
+              "example": "BTC"
+            }
+          },
+          {
+            "name": "fiat",
+            "in": "path",
+            "description": "Moneda contra la que se opera, puede ser fiat o stablecoin",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ARS",
+                "BRL",
+                "CLP",
+                "COP",
+                "MXN",
+                "PEN",
+                "VES",
+                "BOB",
+                "UYU",
+                "DOP",
+                "PYG",
+                "USD",
+                "EUR"
+              ],
+              "example": "ARS"
+            }
+          },
+          {
+            "name": "volumen",
+            "in": "path",
+            "description": "Volumen a operar, utilizar el punto como separador decimal",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "format": "float",
+              "example": 0.1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Cotización exitosa",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cotizacion"
+                }
+              }
+            }
+          }
+        },
+        "x-code-samples": [
+          {
+            "lang": "curl",
+            "label": "cURL",
+            "source": "curl -X GET https://criptoya.com/api/argenbtc/BTC/ARS/0.1"
+          },
+          {
+            "lang": "javascript",
+            "label": "JavaScript (fetch)",
+            "source": "fetch(\"https://criptoya.com/api/argenbtc/BTC/ARS/0.1\")\n  .then(response => response.json())\n  .then(data => console.log(data));"
+          },
+          {
+            "lang": "javascript",
+            "label": "JavaScript (axios)",
+            "source": "axios.get(\"https://criptoya.com/api/argenbtc/BTC/ARS/0.1\")\n  .then(response => console.log(response.data));"
+          },
+          {
+            "lang": "python",
+            "label": "Python",
+            "source": "import requests\nresponse = requests.get(\"https://criptoya.com/api/argenbtc/BTC/ARS/0.1\")\nprint(response.json())"
+          },
+          {
+            "lang": "php",
+            "label": "PHP",
+            "source": "file_get_contents(\"https://criptoya.com/api/argenbtc/BTC/ARS/0.1\")"
+          }
+        ]
+      }
+    },
+    "/api/{coin}/{fiat}/{volumen}": {
+      "get": {
+        "operationId": "get-cotizacion-general",
+        "summary": "Cotización general",
+        "tags": [
+          "Cotizaciones"
+        ],
+        "description": "Devuelve la cotización general para todas las casas de cambio.",
+        "parameters": [
+          {
+            "name": "coin",
+            "in": "path",
+            "description": "Cripto a operar",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "BTC",
+                "ETH",
+                "USDT",
+                "USDC",
+                "DAI",
+                "UXD",
+                "USDP",
+                "WLD",
+                "BNB",
+                "SOL",
+                "XRP",
+                "ADA",
+                "AVAX",
+                "DOGE",
+                "TRX",
+                "LINK",
+                "DOT",
+                "MATIC",
+                "SHIB",
+                "LTC",
+                "BCH",
+                "EOS",
+                "XLM",
+                "FTM",
+                "AAVE",
+                "UNI",
+                "ALGO",
+                "BAT",
+                "PAXG",
+                "CAKE",
+                "AXS",
+                "SLP",
+                "MANA",
+                "SAND",
+                "CHZ"
+              ],
+              "example": "BTC"
+            }
+          },
+          {
+            "name": "fiat",
+            "in": "path",
+            "description": "Moneda contra la que se opera, puede ser fiat o stablecoin",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ARS",
+                "BRL",
+                "CLP",
+                "COP",
+                "MXN",
+                "PEN",
+                "VES",
+                "BOB",
+                "UYU",
+                "DOP",
+                "PYG",
+                "USD",
+                "EUR"
+              ],
+              "example": "ARS"
+            }
+          },
+          {
+            "name": "volumen",
+            "in": "path",
+            "description": "Volumen a operar, utilizar el punto como separador decimal",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "format": "float",
+              "example": 0.1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Cotización exitosa",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cotizacion"
+                }
+              }
+            }
+          }
+        },
+        "x-code-samples": [
+          {
+            "lang": "curl",
+            "label": "cURL",
+            "source": "curl -X GET https://criptoya.com/api/BTC/ARS/0.1"
+          },
+          {
+            "lang": "javascript",
+            "label": "JavaScript (fetch)",
+            "source": "fetch(\"https://criptoya.com/api/BTC/ARS/0.1\")\n  .then(response => response.json())\n  .then(data => console.log(data));"
+          },
+          {
+            "lang": "javascript",
+            "label": "JavaScript (axios)",
+            "source": "axios.get(\"https://criptoya.com/api/BTC/ARS/0.1\")\n  .then(response => console.log(response.data));"
+          },
+          {
+            "lang": "python",
+            "label": "Python",
+            "source": "import requests\nresponse = requests.get(\"https://criptoya.com/api/BTC/ARS/0.1\")\nprint(response.json())"
+          },
+          {
+            "lang": "php",
+            "label": "PHP",
+            "source": "file_get_contents(\"https://criptoya.com/api/BTC/ARS/0.1\")"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Cotizacion": {
+        "title": "Cotizacion",
+        "type": "object",
+        "properties": {
+          "ask": {
+            "type": "number",
+            "format": "float",
+            "description": "Precio de compra reportado por el exchange, sin sumar comisiones"
+          },
+          "totalAsk": {
+            "type": "number",
+            "format": "float",
+            "description": "Precio de compra final incluyendo las comisiones de transferencia y trade"
+          },
+          "bid": {
+            "type": "number",
+            "format": "float",
+            "description": "Precio de venta reportado por el exchange, sin restar comisiones"
+          },
+          "totalBid": {
+            "type": "number",
+            "format": "float",
+            "description": "Precio de venta final incluyendo las comisiones de transferencia y trade"
+          },
+          "time": {
+            "type": "integer",
+            "description": "Timestamp del momento en que fue actualizada esta cotización"
+          }
+        }
+      }
+    }
+  }
+}
