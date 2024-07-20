@@ -16,7 +16,7 @@ La API pública de CriptoYa te permite obtener las cotizaciones de los exchanges
 https://criptoya.com/api
 ```
 
-<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 1rem 0; ">
+<div class="mt-20 flex justify-center flex-col items-center gap-4">
 
 Hecho con ❤️ por [Enzo Notario](https://github.com/enzonotario)
 

@@ -1,22 +1,22 @@
 ---
 home: true
+layout: home
 aside: false
+outline: false
 ---
 
-# CriptoYa API
+<script setup>
+import regions from './public/regions.json'
+</script>
 
-La API pública de CriptoYa te permite obtener las cotizaciones de los exchanges para incorporarlas a tu spreadsheet o app.
+<div class="flex flex-wrap justify-center gap-4 py-8">
+  <a v-for="region in regions" :key="region.id" :href="`/${region.slug}`" class="w-full max-w-xs p-4 bg-gray-100 dark:bg-gray-800 !text-gray-800 dark:!text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg text-center !no-underline">
+    <div v-if="region.svg" v-html="region.svg" class="w-16 h-16 mx-auto mb-4"></div>
+    <span>{{ region.name }}</span>
+  </a>
+</div>
 
--   Las cotizaciones se actualizan cada 1 minuto.
--   Límite: 120 requests por minuto.
-
-## Base URL
-
-```plaintext
-https://criptoya.com/api
-```
-
-<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 1rem 0; ">
+<div class="mt-20 flex justify-center flex-col items-center gap-4">
 
 Hecho con ❤️ por [Enzo Notario](https://github.com/enzonotario)
 

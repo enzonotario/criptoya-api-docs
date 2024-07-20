@@ -8,6 +8,7 @@ async function init() {
     try {
         await generateOpenApi();
         await generateOperations();
+        await copyRegions();
     } catch (error) {
         console.error('Error during initialization:', error);
     }
@@ -46,6 +47,10 @@ async function generateOperations() {
         const pathsContent = await fs.readFile(`.vitepress/scripts/templates/operations/[operationId].paths.js`, 'utf8');
         await fs.writeFile(`${path}/[operationId].paths.js`, pathsContent.replace('REPLACE_REGION', slug));
     }
+}
+
+async function copyRegions() {
+    await fs.copyFile('.vitepress/regions.json', 'public/regions.json');
 }
 
 init();
