@@ -28,8 +28,8 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["GET_COTIZACION_EXCHANGE_ENUMS"],
-              "example": "argenbtc"
+              "enum": ["REPLACE_COTIZACION_EXCHANGE_ENUMS"],
+              "example": "REPLACE_COTIZACION_EXCHANGE_EXAMPLE"
             }
           },
           {
@@ -252,94 +252,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Fees"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/dolar": {
-      "get": {
-        "operationId": "get-dolar",
-        "summary": "Cotización del dólar",
-        "tags": [
-          "Otros"
-        ],
-        "description": "Devuelve la cotización actual del dólar.",
-        "responses": {
-          "200": {
-            "description": "Cotización del dólar exitosa",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DollarQuotes"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/cer": {
-      "get": {
-        "operationId": "get-cer",
-        "summary": "Valor CER",
-        "tags": [
-          "Otros"
-        ],
-        "description": "Devuelve el valor actual del CER.",
-        "responses": {
-          "200": {
-            "description": "Valor CER",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CerValue"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/uva": {
-      "get": {
-        "operationId": "get-uva",
-        "summary": "Valor UVA",
-        "tags": [
-          "Otros"
-        ],
-        "description": "Devuelve el valor actual del UVA.",
-        "responses": {
-          "200": {
-            "description": "Valor UVA",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UvaValue"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/bancostodos": {
-      "get": {
-        "operationId": "get-bancostodos",
-        "summary": "Cotización de bancos",
-        "tags": [
-          "Otros"
-        ],
-        "description": "Devuelve la cotización actual de los bancos.",
-        "responses": {
-          "200": {
-            "description": "Cotización de bancos exitosa",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BancoQuotes"
                 }
               }
             }

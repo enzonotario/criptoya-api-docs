@@ -28,8 +28,8 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["GET_COTIZACION_EXCHANGE_ENUMS"],
-              "example": "argenbtc"
+              "enum": ["REPLACE_COTIZACION_EXCHANGE_ENUMS"],
+              "example": "REPLACE_COTIZACION_EXCHANGE_EXAMPLE"
             }
           },
           {

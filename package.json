@@ -10,10 +10,12 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "docs:gen": "node .vitepress/scripts/generateDocs.mjs"
   },
   "devDependencies": {
+    "collect.js": "^4.36.1",
     "vitepress": "^1.3.1",
-    "vitepress-theme-openapi": "0.0.3-alpha.9"
+    "vitepress-theme-openapi": "https://pkg.pr.new/vitepress-theme-openapi@989f04d"
   }
 }

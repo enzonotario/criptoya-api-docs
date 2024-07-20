@@ -1,0 +1,750 @@
+[
+  {
+    "id": "argenbtc",
+    "country": "AR"
+  },
+  {
+    "id": "astropay",
+    "country": "AR"
+  },
+  {
+    "id": "belo",
+    "country": "AR"
+  },
+  {
+    "id": "binance",
+    "country": "AR"
+  },
+  {
+    "id": "binancep2p",
+    "country": "AR"
+  },
+  {
+    "id": "bingxp2p",
+    "country": "AR"
+  },
+  {
+    "id": "bitex",
+    "country": "AR"
+  },
+  {
+    "id": "bitgetp2p",
+    "country": "AR"
+  },
+  {
+    "id": "bitmonedero",
+    "country": "AR"
+  },
+  {
+    "id": "bitso",
+    "country": "AR"
+  },
+  {
+    "id": "bitsoalpha",
+    "country": "AR"
+  },
+  {
+    "id": "buda",
+    "country": "AR"
+  },
+  {
+    "id": "buenbit",
+    "country": "AR"
+  },
+  {
+    "id": "bybit",
+    "country": "AR"
+  },
+  {
+    "id": "bybitp2p",
+    "country": "AR"
+  },
+  {
+    "id": "calypso",
+    "country": "AR"
+  },
+  {
+    "id": "cocoscrypto",
+    "country": "AR"
+  },
+  {
+    "id": "coinexp2p",
+    "country": "AR"
+  },
+  {
+    "id": "copter",
+    "country": "AR"
+  },
+  {
+    "id": "cryptomkt",
+    "country": "AR"
+  },
+  {
+    "id": "decrypto",
+    "country": "AR"
+  },
+  {
+    "id": "eldoradop2p",
+    "country": "AR"
+  },
+  {
+    "id": "eluter",
+    "country": "AR"
+  },
+  {
+    "id": "fiwind",
+    "country": "AR"
+  },
+  {
+    "id": "huobip2p",
+    "country": "AR"
+  },
+  {
+    "id": "kriptonmarket",
+    "country": "AR"
+  },
+  {
+    "id": "kucoinp2p",
+    "country": "AR"
+  },
+  {
+    "id": "latamex",
+    "country": "AR"
+  },
+  {
+    "id": "lemoncash",
+    "country": "AR"
+  },
+  {
+    "id": "lemoncashp2p",
+    "country": "AR"
+  },
+  {
+    "id": "letsbit",
+    "country": "AR"
+  },
+  {
+    "id": "lnp2pbotp2p",
+    "country": "AR"
+  },
+  {
+    "id": "okexp2p",
+    "country": "AR"
+  },
+  {
+    "id": "paxfulp2p",
+    "country": "AR"
+  },
+  {
+    "id": "paydecep2p",
+    "country": "AR"
+  },
+  {
+    "id": "pluscrypto",
+    "country": "AR"
+  },
+  {
+    "id": "ripio",
+    "country": "AR"
+  },
+  {
+    "id": "ripioexchange",
+    "country": "AR"
+  },
+  {
+    "id": "saldo",
+    "country": "AR"
+  },
+  {
+    "id": "satoshitango",
+    "country": "AR"
+  },
+  {
+    "id": "syklop2p",
+    "country": "AR"
+  },
+  {
+    "id": "tiendacrypto",
+    "country": "AR"
+  },
+  {
+    "id": "trubit",
+    "country": "AR"
+  },
+  {
+    "id": "trubitp2p",
+    "country": "AR"
+  },
+  {
+    "id": "vibrant",
+    "country": "AR"
+  },
+  {
+    "id": "binancep2p",
+    "country": "BO"
+  },
+  {
+    "id": "coinexp2p",
+    "country": "BO"
+  },
+  {
+    "id": "paxfulp2p",
+    "country": "BO"
+  },
+  {
+    "id": "syklop2p",
+    "country": "BO"
+  },
+  {
+    "id": "astropay",
+    "country": "BR"
+  },
+  {
+    "id": "binance",
+    "country": "BR"
+  },
+  {
+    "id": "binancep2p",
+    "country": "BR"
+  },
+  {
+    "id": "bingxp2p",
+    "country": "BR"
+  },
+  {
+    "id": "bitcointoyou",
+    "country": "BR"
+  },
+  {
+    "id": "bitcointrade",
+    "country": "BR"
+  },
+  {
+    "id": "bitgetp2p",
+    "country": "BR"
+  },
+  {
+    "id": "bitso",
+    "country": "BR"
+  },
+  {
+    "id": "bitsoalpha",
+    "country": "BR"
+  },
+  {
+    "id": "brasilbitcoin",
+    "country": "BR"
+  },
+  {
+    "id": "bybit",
+    "country": "BR"
+  },
+  {
+    "id": "bybitp2p",
+    "country": "BR"
+  },
+  {
+    "id": "coinexp2p",
+    "country": "BR"
+  },
+  {
+    "id": "cryptomkt",
+    "country": "BR"
+  },
+  {
+    "id": "flowbtc",
+    "country": "BR"
+  },
+  {
+    "id": "foxbit",
+    "country": "BR"
+  },
+  {
+    "id": "kucoinp2p",
+    "country": "BR"
+  },
+  {
+    "id": "latamex",
+    "country": "BR"
+  },
+  {
+    "id": "lemoncash",
+    "country": "BR"
+  },
+  {
+    "id": "lnp2pbotp2p",
+    "country": "BR"
+  },
+  {
+    "id": "mercadobitcoin",
+    "country": "BR"
+  },
+  {
+    "id": "okexp2p",
+    "country": "BR"
+  },
+  {
+    "id": "pagcripto",
+    "country": "BR"
+  },
+  {
+    "id": "paxfulp2p",
+    "country": "BR"
+  },
+  {
+    "id": "ripio",
+    "country": "BR"
+  },
+  {
+    "id": "ripioexchange",
+    "country": "BR"
+  },
+  {
+    "id": "satoshitango",
+    "country": "BR"
+  },
+  {
+    "id": "trubit",
+    "country": "BR"
+  },
+  {
+    "id": "astropay",
+    "country": "CL"
+  },
+  {
+    "id": "binancep2p",
+    "country": "CL"
+  },
+  {
+    "id": "bingxp2p",
+    "country": "CL"
+  },
+  {
+    "id": "bitex",
+    "country": "CL"
+  },
+  {
+    "id": "bitgetp2p",
+    "country": "CL"
+  },
+  {
+    "id": "buda",
+    "country": "CL"
+  },
+  {
+    "id": "bybitp2p",
+    "country": "CL"
+  },
+  {
+    "id": "coinexp2p",
+    "country": "CL"
+  },
+  {
+    "id": "cryptomkt",
+    "country": "CL"
+  },
+  {
+    "id": "eldoradop2p",
+    "country": "CL"
+  },
+  {
+    "id": "lnp2pbotp2p",
+    "country": "CL"
+  },
+  {
+    "id": "okexp2p",
+    "country": "CL"
+  },
+  {
+    "id": "orionx",
+    "country": "CL"
+  },
+  {
+    "id": "paxfulp2p",
+    "country": "CL"
+  },
+  {
+    "id": "satoshitango",
+    "country": "CL"
+  },
+  {
+    "id": "syklop2p",
+    "country": "CL"
+  },
+  {
+    "id": "vitawallet",
+    "country": "CL"
+  },
+  {
+    "id": "astropay",
+    "country": "CO"
+  },
+  {
+    "id": "binancep2p",
+    "country": "CO"
+  },
+  {
+    "id": "bingxp2p",
+    "country": "CO"
+  },
+  {
+    "id": "bitgetp2p",
+    "country": "CO"
+  },
+  {
+    "id": "bitso",
+    "country": "CO"
+  },
+  {
+    "id": "bitsoalpha",
+    "country": "CO"
+  },
+  {
+    "id": "buda",
+    "country": "CO"
+  },
+  {
+    "id": "buenbit",
+    "country": "CO"
+  },
+  {
+    "id": "bybitp2p",
+    "country": "CO"
+  },
+  {
+    "id": "coinexp2p",
+    "country": "CO"
+  },
+  {
+    "id": "cryptomkt",
+    "country": "CO"
+  },
+  {
+    "id": "eldoradop2p",
+    "country": "CO"
+  },
+  {
+    "id": "kriptonmarket",
+    "country": "CO"
+  },
+  {
+    "id": "kucoinp2p",
+    "country": "CO"
+  },
+  {
+    "id": "letsbit",
+    "country": "CO"
+  },
+  {
+    "id": "lnp2pbotp2p",
+    "country": "CO"
+  },
+  {
+    "id": "okexp2p",
+    "country": "CO"
+  },
+  {
+    "id": "paxfulp2p",
+    "country": "CO"
+  },
+  {
+    "id": "ripio",
+    "country": "CO"
+  },
+  {
+    "id": "saldo",
+    "country": "CO"
+  },
+  {
+    "id": "syklop2p",
+    "country": "CO"
+  },
+  {
+    "id": "binancep2p",
+    "country": "DO"
+  },
+  {
+    "id": "bingxp2p",
+    "country": "DO"
+  },
+  {
+    "id": "bitgetp2p",
+    "country": "DO"
+  },
+  {
+    "id": "coinexp2p",
+    "country": "DO"
+  },
+  {
+    "id": "okexp2p",
+    "country": "DO"
+  },
+  {
+    "id": "astropay",
+    "country": "MX"
+  },
+  {
+    "id": "binance",
+    "country": "MX"
+  },
+  {
+    "id": "binancep2p",
+    "country": "MX"
+  },
+  {
+    "id": "bingxp2p",
+    "country": "MX"
+  },
+  {
+    "id": "bitgetp2p",
+    "country": "MX"
+  },
+  {
+    "id": "bitso",
+    "country": "MX"
+  },
+  {
+    "id": "bitsoalpha",
+    "country": "MX"
+  },
+  {
+    "id": "bybit",
+    "country": "MX"
+  },
+  {
+    "id": "bybitp2p",
+    "country": "MX"
+  },
+  {
+    "id": "coinexp2p",
+    "country": "MX"
+  },
+  {
+    "id": "domitai",
+    "country": "MX"
+  },
+  {
+    "id": "huobip2p",
+    "country": "MX"
+  },
+  {
+    "id": "kucoinp2p",
+    "country": "MX"
+  },
+  {
+    "id": "latamex",
+    "country": "MX"
+  },
+  {
+    "id": "lnp2pbotp2p",
+    "country": "MX"
+  },
+  {
+    "id": "okexp2p",
+    "country": "MX"
+  },
+  {
+    "id": "paxfulp2p",
+    "country": "MX"
+  },
+  {
+    "id": "ripio",
+    "country": "MX"
+  },
+  {
+    "id": "saldo",
+    "country": "MX"
+  },
+  {
+    "id": "syklop2p",
+    "country": "MX"
+  },
+  {
+    "id": "trubit",
+    "country": "MX"
+  },
+  {
+    "id": "trubitp2p",
+    "country": "MX"
+  },
+  {
+    "id": "astropay",
+    "country": "PE"
+  },
+  {
+    "id": "banexcoin",
+    "country": "PE"
+  },
+  {
+    "id": "binancep2p",
+    "country": "PE"
+  },
+  {
+    "id": "bingxp2p",
+    "country": "PE"
+  },
+  {
+    "id": "bitgetp2p",
+    "country": "PE"
+  },
+  {
+    "id": "buda",
+    "country": "PE"
+  },
+  {
+    "id": "buenbit",
+    "country": "PE"
+  },
+  {
+    "id": "bybitp2p",
+    "country": "PE"
+  },
+  {
+    "id": "coinexp2p",
+    "country": "PE"
+  },
+  {
+    "id": "cryptomkt",
+    "country": "PE"
+  },
+  {
+    "id": "decrypto",
+    "country": "PE"
+  },
+  {
+    "id": "eldoraDO2p",
+    "country": "PE"
+  },
+  {
+    "id": "fluyez",
+    "country": "PE"
+  },
+  {
+    "id": "letsbit",
+    "country": "PE"
+  },
+  {
+    "id": "lnp2pbotp2p",
+    "country": "PE"
+  },
+  {
+    "id": "okexp2p",
+    "country": "PE"
+  },
+  {
+    "id": "paxfulp2p",
+    "country": "PE"
+  },
+  {
+    "id": "satoshitango",
+    "country": "PE"
+  },
+  {
+    "id": "syklop2p",
+    "country": "PE"
+  },
+  {
+    "id": "binancep2p",
+    "country": "PY"
+  },
+  {
+    "id": "bingxp2p",
+    "country": "PY"
+  },
+  {
+    "id": "coinexp2p",
+    "country": "PY"
+  },
+  {
+    "id": "okexp2p",
+    "country": "PY"
+  },
+  {
+    "id": "x4t",
+    "country": "PY"
+  },
+  {
+    "id": "binancep2p",
+    "country": "UY"
+  },
+  {
+    "id": "bingxp2p",
+    "country": "UY"
+  },
+  {
+    "id": "bitgetp2p",
+    "country": "UY"
+  },
+  {
+    "id": "coinexp2p",
+    "country": "UY"
+  },
+  {
+    "id": "huobip2p",
+    "country": "UY"
+  },
+  {
+    "id": "kriptonmarket",
+    "country": "UY"
+  },
+  {
+    "id": "okexp2p",
+    "country": "UY"
+  },
+  {
+    "id": "paxfulp2p",
+    "country": "UY"
+  },
+  {
+    "id": "ripio",
+    "country": "UY"
+  },
+  {
+    "id": "syklop2p",
+    "country": "UY"
+  },
+  {
+    "id": "binancep2p",
+    "country": "VE"
+  },
+  {
+    "id": "bingxp2p",
+    "country": "VE"
+  },
+  {
+    "id": "bitgetp2p",
+    "country": "VE"
+  },
+  {
+    "id": "bybitp2p",
+    "country": "VE"
+  },
+  {
+    "id": "coinexp2p",
+    "country": "VE"
+  },
+  {
+    "id": "eldoraDO2p",
+    "country": "VE"
+  },
+  {
+    "id": "lnp2pbotp2p",
+    "country": "VE"
+  },
+  {
+    "id": "okexp2p",
+    "country": "VE"
+  },
+  {
+    "id": "paydecep2p",
+    "country": "VE"
+  },
+  {
+    "id": "saldo",
+    "country": "VE"
+  },
+  {
+    "id": "syklop2p",
+    "country": "VE"
+  }
+]
