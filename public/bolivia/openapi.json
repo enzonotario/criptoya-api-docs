@@ -30,9 +30,9 @@
                             "type": "string",
                             "enum": [
                                 "binancep2p",
+                                "syklop2p",
                                 "coinexp2p",
-                                "paxfulp2p",
-                                "syklop2p"
+                                "paxfulp2p"
                             ],
                             "example": "binancep2p"
                         }

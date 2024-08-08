@@ -29,18 +29,19 @@
                         "schema": {
                             "type": "string",
                             "enum": [
-                                "binancep2p",
-                                "bingxp2p",
-                                "bitgetp2p",
-                                "coinexp2p",
-                                "huobip2p",
-                                "kriptonmarket",
-                                "okexp2p",
-                                "paxfulp2p",
+                                "xapo",
                                 "ripio",
-                                "syklop2p"
+                                "huobip2p",
+                                "okexp2p",
+                                "bingxp2p",
+                                "binancep2p",
+                                "kriptonmarket",
+                                "paxfulp2p",
+                                "syklop2p",
+                                "bitgetp2p",
+                                "coinexp2p"
                             ],
-                            "example": "binancep2p"
+                            "example": "xapo"
                         }
                     },
                     {
