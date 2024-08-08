@@ -29,27 +29,29 @@
                         "schema": {
                             "type": "string",
                             "enum": [
-                                "astropay",
-                                "banexcoin",
-                                "binancep2p",
-                                "bingxp2p",
-                                "bitgetp2p",
-                                "buda",
+                                "xapo",
+                                "letsbit",
+                                "decrypto",
+                                "satoshitango",
                                 "buenbit",
+                                "astropay",
+                                "cryptomkt",
+                                "paxfulp2p",
+                                "buda",
+                                "banexcoin",
                                 "bybitp2p",
                                 "coinexp2p",
-                                "cryptomkt",
-                                "decrypto",
-                                "eldoraDO2p",
-                                "fluyez",
-                                "letsbit",
-                                "lnp2pbotp2p",
+                                "bitgetp2p",
                                 "okexp2p",
-                                "paxfulp2p",
-                                "satoshitango",
-                                "syklop2p"
+                                "lnp2pbotp2p",
+                                "binancep2p",
+                                "fluyez",
+                                "bingxp2p",
+                                "syklop2p",
+                                "eldoradop2p",
+                                "cryptomktpro"
                             ],
-                            "example": "astropay"
+                            "example": "xapo"
                         }
                     },
                     {

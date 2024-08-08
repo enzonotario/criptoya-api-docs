@@ -29,30 +29,31 @@
                         "schema": {
                             "type": "string",
                             "enum": [
-                                "astropay",
-                                "binance",
-                                "binancep2p",
-                                "bingxp2p",
-                                "bitgetp2p",
-                                "bitso",
+                                "xapo",
                                 "bitsoalpha",
-                                "bybit",
+                                "bitso",
+                                "ripio",
                                 "bybitp2p",
-                                "coinexp2p",
-                                "domitai",
+                                "astropay",
+                                "binancep2p",
+                                "latamex",
+                                "trubit",
                                 "huobip2p",
                                 "kucoinp2p",
-                                "latamex",
-                                "lnp2pbotp2p",
-                                "okexp2p",
                                 "paxfulp2p",
-                                "ripio",
+                                "trubitp2p",
+                                "binance",
                                 "saldo",
+                                "bybit",
+                                "domitai",
+                                "coinexp2p",
+                                "okexp2p",
+                                "lnp2pbotp2p",
+                                "bingxp2p",
                                 "syklop2p",
-                                "trubit",
-                                "trubitp2p"
+                                "bitgetp2p"
                             ],
-                            "example": "astropay"
+                            "example": "xapo"
                         }
                     },
                     {

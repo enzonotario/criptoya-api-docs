@@ -1,7 +1,6 @@
 import spec from './templates/openapi.json' assert { type: 'json' };
 import specArgentina from './templates/openapi-argentina.json' assert { type: 'json' };
 import regions from '../regions.json' assert { type: 'json' };
-import exchanges from '../exchanges.json' assert { type: 'json' };
 import fs from 'fs/promises';
 
 async function init() {
@@ -20,12 +19,15 @@ async function generateOpenApi() {
         const path = `public/${slug}`;
         await fs.mkdir(path, { recursive: true });
 
-        const regionExchanges = exchanges.filter(exchange => exchange.country === region.code);
+        const regionsByExchanges = await fetch('https://criptoya.com/api/exchanges')
+            .then(response => response.json())
+
+        const regionExchanges = regionsByExchanges[region.code.toLowerCase()] || [];
 
         const specToUse = slug === 'argentina' ? specArgentina : spec;
         const specString = JSON.stringify(specToUse)
-            .replace('"REPLACE_COTIZACION_EXCHANGE_ENUMS"', regionExchanges.map(exchange => `"${exchange.id}"`).join(','))
-            .replace('"REPLACE_COTIZACION_EXCHANGE_EXAMPLE"', `"${regionExchanges[0]?.id || ''}"`);
+            .replace('"REPLACE_COTIZACION_EXCHANGE_ENUMS"', regionExchanges.map(exchange => `"${exchange}"`).join(','))
+            .replace('"REPLACE_COTIZACION_EXCHANGE_EXAMPLE"', `"${regionExchanges[0] || ''}"`);
 
         await fs.writeFile(`${path}/openapi.json`, JSON.stringify(JSON.parse(specString), null, 4));
     }
