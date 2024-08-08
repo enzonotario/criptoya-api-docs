@@ -94,7 +94,7 @@
                     {
                         "name": "fiat",
                         "in": "path",
-                        "description": "Moneda contra la que se opera, puede ser fiat o stablecoin",
+                        "description": "Moneda contra la que se opera",
                         "required": true,
                         "schema": {
                             "type": "string",
