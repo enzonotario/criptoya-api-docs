@@ -6,6 +6,5 @@ module.exports = {
     'node_modules/vitepress-theme-openapi/**/*.{js,jsx,ts,tsx}',
   ],
   darkMode: 'class',
-  plugins: [
-  ],
+  plugins: [],
 }
