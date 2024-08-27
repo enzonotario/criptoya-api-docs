@@ -32,13 +32,13 @@
                                 "xapo",
                                 "okexp2p",
                                 "ripio",
-                                "paxfulp2p",
                                 "binancep2p",
+                                "paxfulp2p",
+                                "bingxp2p",
+                                "syklop2p",
                                 "bitgetp2p",
                                 "coinexp2p",
-                                "syklop2p",
-                                "huobip2p",
-                                "bingxp2p"
+                                "huobip2p"
                             ],
                             "example": "xapo"
                         }
