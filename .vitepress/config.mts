@@ -1,14 +1,11 @@
 import { URL, fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
-import { useSidebar, useOpenapi } from 'vitepress-theme-openapi'
+import { useSidebar } from 'vitepress-theme-openapi'
 import { collect } from 'collect.js'
 import regions from './regions.json' assert { type: 'json' }
 import spec from '../public/argentina/openapi.json' assert { type: 'json' }
 
-const openapi = useOpenapi()
-openapi.setSpec(spec)
-
-const sidebar = useSidebar()
+const sidebar = useSidebar({ spec })
 
 function addRegionPrefixToSidebarItems(prefix, items) {
   return {
