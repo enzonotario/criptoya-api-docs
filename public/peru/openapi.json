@@ -30,24 +30,24 @@
                             "type": "string",
                             "enum": [
                                 "xapo",
+                                "satoshitango",
                                 "letsbit",
                                 "decrypto",
-                                "bybitp2p",
+                                "buda",
                                 "buenbit",
-                                "bitgetp2p",
-                                "binancep2p",
+                                "cryptomkt",
+                                "bybitp2p",
                                 "banexcoin",
                                 "syklop2p",
-                                "cryptomkt",
-                                "satoshitango",
+                                "cryptomktpro",
+                                "bitgetp2p",
+                                "binancep2p",
                                 "okexp2p",
                                 "paxfulp2p",
-                                "buda",
-                                "cryptomktpro",
-                                "lnp2pbotp2p",
+                                "coinexp2p",
                                 "bingxp2p",
                                 "eldoradop2p",
-                                "coinexp2p"
+                                "lnp2pbotp2p"
                             ],
                             "example": "xapo"
                         }

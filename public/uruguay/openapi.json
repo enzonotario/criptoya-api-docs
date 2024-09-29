@@ -31,11 +31,11 @@
                             "enum": [
                                 "xapo",
                                 "binancep2p",
-                                "paxfulp2p",
-                                "bingxp2p",
                                 "ripio",
-                                "okexp2p",
+                                "paxfulp2p",
                                 "coinexp2p",
+                                "okexp2p",
+                                "bingxp2p",
                                 "huobip2p",
                                 "syklop2p",
                                 "bitgetp2p"

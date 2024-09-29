@@ -31,8 +31,8 @@
                             "enum": [
                                 "binancep2p",
                                 "okexp2p",
-                                "coinexp2p",
                                 "bitgetp2p",
+                                "coinexp2p",
                                 "bingxp2p"
                             ],
                             "example": "binancep2p"
