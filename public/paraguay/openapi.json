@@ -30,10 +30,10 @@
                             "type": "string",
                             "enum": [
                                 "x4t",
-                                "binancep2p",
-                                "coinexp2p",
                                 "okexp2p",
-                                "bingxp2p"
+                                "binancep2p",
+                                "bingxp2p",
+                                "coinexp2p"
                             ],
                             "example": "x4t"
                         }

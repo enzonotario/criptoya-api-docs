@@ -29,11 +29,11 @@
                         "schema": {
                             "type": "string",
                             "enum": [
-                                "paxfulp2p",
                                 "binancep2p",
+                                "paxfulp2p",
                                 "coinexp2p"
                             ],
-                            "example": "paxfulp2p"
+                            "example": "binancep2p"
                         }
                     },
                     {
