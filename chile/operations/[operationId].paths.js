@@ -1,4 +1,4 @@
-import { OpenApi } from 'vitepress-theme-openapi'
+import { OpenApi } from 'vitepress-openapi'
 import spec from '../../public/chile/openapi.json' assert { type: 'json' }
 
 export default {

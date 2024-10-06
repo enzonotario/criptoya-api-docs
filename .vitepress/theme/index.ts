@@ -1,8 +1,8 @@
 import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
-import { theme, useTheme } from 'vitepress-theme-openapi'
+import { theme, useTheme } from 'vitepress-openapi'
 
-import 'vitepress-theme-openapi/dist/style.css'
+import 'vitepress-openapi/dist/style.css'
 import './style.css'
 
 export default {
