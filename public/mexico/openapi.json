@@ -31,23 +31,23 @@
                             "enum": [
                                 "xapo",
                                 "bitsoalpha",
-                                "binancep2p",
-                                "bybitp2p",
                                 "bitso",
-                                "huobip2p",
                                 "ripio",
-                                "trubit",
-                                "bitgetp2p",
+                                "okexp2p",
                                 "binance",
                                 "bybit",
+                                "trubit",
+                                "binancep2p",
+                                "huobip2p",
+                                "saldo",
+                                "bybitp2p",
+                                "bingxp2p",
+                                "trubitp2p",
                                 "paxfulp2p",
                                 "kucoinp2p",
+                                "bitgetp2p",
                                 "lnp2pbotp2p",
-                                "coinexp2p",
-                                "saldo",
-                                "okexp2p",
-                                "bingxp2p",
-                                "trubitp2p"
+                                "coinexp2p"
                             ],
                             "example": "xapo"
                         }

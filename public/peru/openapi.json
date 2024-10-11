@@ -34,19 +34,19 @@
                                 "letsbit",
                                 "decrypto",
                                 "binancep2p",
+                                "buenbit",
+                                "bitgetp2p",
+                                "okexp2p",
+                                "eldoradop2p",
                                 "buda",
                                 "cryptomkt",
-                                "lnp2pbotp2p",
-                                "buenbit",
-                                "coinexp2p",
-                                "paxfulp2p",
                                 "banexcoin",
-                                "bybitp2p",
-                                "okexp2p",
-                                "bitgetp2p",
                                 "bingxp2p",
-                                "eldoradop2p",
-                                "cryptomktpro"
+                                "paxfulp2p",
+                                "bybitp2p",
+                                "lnp2pbotp2p",
+                                "cryptomktpro",
+                                "coinexp2p"
                             ],
                             "example": "xapo"
                         }
