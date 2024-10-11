@@ -24,8 +24,8 @@ importers:
         specifier: ^1.3.1
         version: 1.3.1(@algolia/client-search@4.24.0)(postcss@8.4.39)(search-insights@2.15.0)
       vitepress-openapi:
-        specifier: 0.0.3-alpha.35
-        version: 0.0.3-alpha.35(tailwindcss@3.4.6)(vue@3.4.31)
+        specifier: 0.0.3-alpha.38
+        version: 0.0.3-alpha.38(tailwindcss@3.4.6)(vue@3.4.31)
 
 packages:
 
@@ -1103,8 +1103,8 @@ packages:
       terser:
         optional: true
 
-  vitepress-openapi@0.0.3-alpha.35:
-    resolution: {integrity: sha512-0oUoOwsdjEYBFyxuYmTrFpjxEQDVRhsohxwKb/OjPiXS3dlnJcIh2pvv0/DJFCAX92yYs7KfI+YA8NeNPA9SzQ==}
+  vitepress-openapi@0.0.3-alpha.38:
+    resolution: {integrity: sha512-TT8EJfJfPbQZM/srYw46YqndGzL3r1R59wusszH1U51xAkXmtXY5yKSdWk6bNSzfc1D0cEIFOy+La3WvFqjb1Q==}
     peerDependencies:
       vue: ^3.4.29
 
@@ -2189,7 +2189,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  vitepress-openapi@0.0.3-alpha.35(tailwindcss@3.4.6)(vue@3.4.31):
+  vitepress-openapi@0.0.3-alpha.38(tailwindcss@3.4.6)(vue@3.4.31):
     dependencies:
       '@vueuse/core': 10.11.0(vue@3.4.31)
       class-variance-authority: 0.7.0

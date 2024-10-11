@@ -9,7 +9,9 @@ export default {
   ...DefaultTheme,
   enhanceApp({ app, router, siteData }) {
     const themeConfig = useTheme()
-    themeConfig.setLocale('es')
+    themeConfig.setI18nConfig({
+      locale: 'es',
+    })
     themeConfig.setJsonViewerDeep(1)
     themeConfig.setSchemaViewerDeep(1)
 
