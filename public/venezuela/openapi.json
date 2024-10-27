@@ -31,14 +31,14 @@
                             "enum": [
                                 "bitgetp2p",
                                 "binancep2p",
-                                "saldo",
-                                "eldoradop2p",
-                                "okexp2p",
-                                "coinexp2p",
-                                "bybitp2p",
-                                "lnp2pbotp2p",
+                                "paydecep2p",
                                 "bingxp2p",
-                                "paydecep2p"
+                                "bybitp2p",
+                                "saldo",
+                                "okexp2p",
+                                "eldoradop2p",
+                                "lnp2pbotp2p",
+                                "coinexp2p"
                             ],
                             "example": "bitgetp2p"
                         }
