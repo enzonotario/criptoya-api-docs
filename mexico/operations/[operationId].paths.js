@@ -1,17 +1,17 @@
-import { OpenApi } from 'vitepress-openapi'
+import { usePaths } from 'vitepress-openapi'
 import spec from '../../public/mexico/openapi.json' assert { type: 'json' }
 
 export default {
     paths() {
-        const openapi = OpenApi({ spec })
-
-        return openapi.getPathsByVerbs().map(({ operationId, summary }) => {
-            return {
-                params: {
-                    operationId,
-                    pageTitle: `${summary} - CriptoYa API`,
-                },
-            }
-        })
+        return usePaths({ spec })
+            .getPathsByVerbs()
+            .map(({ operationId, summary }) => {
+                return {
+                    params: {
+                        operationId,
+                        pageTitle: `${summary} - CriptoYa API`,
+                    },
+                }
+            })
     },
 }
