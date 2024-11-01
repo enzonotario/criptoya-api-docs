@@ -35,8 +35,8 @@
                                 "paxfulp2p",
                                 "binancep2p",
                                 "coinexp2p",
-                                "bitgetp2p",
                                 "bingxp2p",
+                                "bitgetp2p",
                                 "huobip2p"
                             ],
                             "example": "xapo"
