@@ -29,27 +29,27 @@
                         "schema": {
                             "type": "string",
                             "enum": [
-                                "xapo",
                                 "satoshitango",
                                 "letsbit",
                                 "decrypto",
-                                "buda",
+                                "xapo",
                                 "buenbit",
+                                "okexp2p",
                                 "lemoncash",
                                 "cryptomkt",
-                                "banexcoin",
-                                "coinexp2p",
-                                "binancep2p",
-                                "lnp2pbotp2p",
-                                "okexp2p",
-                                "bingxp2p",
+                                "eldoradop2p",
                                 "bybitp2p",
+                                "binancep2p",
+                                "buda",
+                                "banexcoin",
                                 "bitgetp2p",
                                 "paxfulp2p",
-                                "eldoradop2p",
+                                "coinexp2p",
+                                "lnp2pbotp2p",
+                                "bingxp2p",
                                 "cryptomktpro"
                             ],
-                            "example": "xapo"
+                            "example": "satoshitango"
                         }
                     },
                     {

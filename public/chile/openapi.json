@@ -29,21 +29,21 @@
                         "schema": {
                             "type": "string",
                             "enum": [
-                                "xapo",
                                 "satoshitango",
+                                "xapo",
+                                "bitgetp2p",
                                 "cryptomkt",
-                                "okexp2p",
-                                "cryptomktpro",
-                                "bingxp2p",
-                                "binancep2p",
+                                "paxfulp2p",
                                 "bybitp2p",
                                 "buda",
-                                "paxfulp2p",
-                                "bitgetp2p",
+                                "coinexp2p",
+                                "binancep2p",
                                 "lnp2pbotp2p",
-                                "coinexp2p"
+                                "cryptomktpro",
+                                "bingxp2p",
+                                "okexp2p"
                             ],
-                            "example": "xapo"
+                            "example": "satoshitango"
                         }
                     },
                     {

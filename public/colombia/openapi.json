@@ -29,30 +29,32 @@
                         "schema": {
                             "type": "string",
                             "enum": [
-                                "xapo",
                                 "letsbit",
+                                "xapo",
                                 "bitsoalpha",
-                                "bybitp2p",
-                                "cryptomkt",
+                                "binancep2p",
                                 "ripio",
                                 "buda",
-                                "okexp2p",
-                                "kucoinp2p",
-                                "bitso",
-                                "buenbit",
-                                "paxfulp2p",
-                                "binancep2p",
                                 "saldo",
-                                "kriptonmarket",
+                                "bitso",
                                 "bitgetp2p",
-                                "paydecep2p",
-                                "lnp2pbotp2p",
-                                "coinexp2p",
-                                "eldoradop2p",
                                 "cryptomktpro",
-                                "bingxp2p"
+                                "cryptomkt",
+                                "eldoradop2p",
+                                "bitfinexp2p",
+                                "paxfulp2p",
+                                "kriptonmarket",
+                                "bybitp2p",
+                                "kucoinp2p",
+                                "bingxp2p",
+                                "buenbit",
+                                "paydecep2p",
+                                "okexp2p",
+                                "dolarapp",
+                                "coinexp2p",
+                                "lnp2pbotp2p"
                             ],
-                            "example": "xapo"
+                            "example": "letsbit"
                         }
                     },
                     {
