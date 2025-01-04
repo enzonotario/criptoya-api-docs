@@ -18,7 +18,7 @@ https://criptoya.com/api
 
 <div class="mt-20 flex justify-center flex-col items-center gap-4">
 
-Hecho con ❤️ por [Enzo Notario](https://github.com/enzonotario)
+Documentación hecha con ❤️ por [Enzo Notario](https://github.com/enzonotario)
 
 ::: info Contacto
 
