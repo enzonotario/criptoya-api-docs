@@ -19,7 +19,7 @@
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.6",
     "vitepress": "^1.6.3",
-    "vitepress-openapi": "^0.0.3-alpha.58"
+    "vitepress-openapi": "^0.0.3-alpha.65"
   },
   "packageManager": "pnpm@9.8.0"
 }
