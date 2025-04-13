@@ -2,6 +2,7 @@ import { URL, fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
 import { useSidebar } from 'vitepress-openapi'
 import { collect } from 'collect.js'
+import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import regions from './regions.json' assert { type: 'json' }
 import spec from '../public/argentina/openapi.json' assert { type: 'json' }
 
@@ -118,5 +119,19 @@ export default defineConfig({
         '@': fileURLToPath(new URL('./', import.meta.url)),
       },
     },
+    plugins: [
+      groupIconVitePlugin({
+        customIcon: {
+          curl: 'simple-icons:curl', // Custom icon for curl.
+        },
+        defaultLabels: [ // Preload icons for specific labels.
+          'curl',
+          '.ts',
+          '.js',
+          '.py',
+          '.php',
+        ],
+      }),
+    ],
   },
 })
