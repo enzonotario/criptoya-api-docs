@@ -29,19 +29,18 @@
                         "schema": {
                             "type": "string",
                             "enum": [
-                                "bitgetp2p",
-                                "saldo",
                                 "binancep2p",
-                                "coinexp2p",
-                                "bingxp2p",
+                                "saldo",
+                                "eldoradop2p",
                                 "bybitp2p",
                                 "paydecep2p",
-                                "bitfinexp2p",
-                                "okexp2p",
-                                "eldoradop2p",
-                                "lnp2pbotp2p"
+                                "coinexp2p",
+                                "bitgetp2p",
+                                "bingxp2p",
+                                "lnp2pbotp2p",
+                                "okexp2p"
                             ],
-                            "example": "bitgetp2p"
+                            "example": "binancep2p"
                         }
                     },
                     {

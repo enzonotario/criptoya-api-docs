@@ -34,20 +34,20 @@
                                 "decrypto",
                                 "xapo",
                                 "cryptomkt",
-                                "buenbit",
                                 "lemoncash",
+                                "binancep2p",
+                                "buenbit",
+                                "bingxp2p",
+                                "buda",
                                 "banexcoin",
                                 "bitgetp2p",
-                                "bybitp2p",
-                                "binancep2p",
-                                "buda",
                                 "paxfulp2p",
-                                "lnp2pbotp2p",
                                 "okexp2p",
+                                "eldoradop2p",
                                 "cryptomktpro",
+                                "bybitp2p",
                                 "coinexp2p",
-                                "bingxp2p",
-                                "eldoradop2p"
+                                "lnp2pbotp2p"
                             ],
                             "example": "satoshitango"
                         }
