@@ -30,15 +30,15 @@
                             "type": "string",
                             "enum": [
                                 "binancep2p",
-                                "saldo",
-                                "eldoradop2p",
-                                "bybitp2p",
-                                "paydecep2p",
-                                "coinexp2p",
                                 "bitgetp2p",
-                                "bingxp2p",
+                                "saldo",
+                                "bybitp2p",
+                                "coinexp2p",
+                                "eldoradop2p",
+                                "paydecep2p",
+                                "okexp2p",
                                 "lnp2pbotp2p",
-                                "okexp2p"
+                                "bingxp2p"
                             ],
                             "example": "binancep2p"
                         }
