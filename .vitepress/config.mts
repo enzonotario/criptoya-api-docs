@@ -3,8 +3,8 @@ import { defineConfig } from 'vitepress'
 import { useSidebar } from 'vitepress-openapi'
 import { collect } from 'collect.js'
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
-import regions from './regions.json' assert { type: 'json' }
-import spec from '../public/argentina/openapi.json' assert { type: 'json' }
+import regions from './regions.json' with { type: 'json' }
+import spec from '../public/argentina/openapi.json' with { type: 'json' }
 
 const sidebar = useSidebar({ spec })
 
@@ -80,7 +80,11 @@ export default defineConfig({
         icon: 'github',
         link: 'https://github.com/enzonotario/criptoya-api-docs',
       }
-    ]
+    ],
+    footer: {
+      message: 'Contacto: <a mailto="contacto@criptoya.com" target="_blank" rel="noopener noreferrer">contacto@criptoya.com</a>',
+      copyright: 'Copyright © 2020-presente <a href="https://criptoya.com" target="_blank" rel="noopener noreferrer">CriptoYa</a>'
+    },
   },
 
   head: [

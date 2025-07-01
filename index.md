@@ -15,17 +15,3 @@ import regions from './public/regions.json'
     <span>{{ region.name }}</span>
   </a>
 </div>
-
-<div class="mt-20 flex justify-center flex-col items-center gap-4">
-
-Documentación hecha con ❤️ por [Enzo Notario](https://github.com/enzonotario)
-
-::: info Contacto
-
-Por consultas relacionadas con la API, por favor contactar a [contacto@criptoya.com](mailto:contacto@criptoya.com).
-
-:::
-
-Copyright © 2020-presente [CriptoYa](https://criptoya.com)
-
-</div>

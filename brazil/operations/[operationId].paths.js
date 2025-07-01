@@ -1,5 +1,5 @@
 import { usePaths } from 'vitepress-openapi'
-import spec from '../../public/brazil/openapi.json' assert { type: 'json' }
+import spec from '../../public/brazil/openapi.json' with { type: 'json' }
 
 export default {
     paths() {

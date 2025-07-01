@@ -1,6 +1,6 @@
-import spec from './templates/openapi.json' assert { type: 'json' };
-import specArgentina from './templates/openapi-argentina.json' assert { type: 'json' };
-import regions from '../regions.json' assert { type: 'json' };
+import spec from './templates/openapi.json' with { type: 'json' };
+import specArgentina from './templates/openapi-argentina.json' with { type: 'json' };
+import regions from '../regions.json' with { type: 'json' };
 import fs from 'fs/promises';
 
 async function init() {
