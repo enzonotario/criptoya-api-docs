@@ -14,13 +14,13 @@
     "docs:gen": "node .vitepress/scripts/generateDocs.mjs"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.21",
     "collect.js": "^4.36.1",
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.6",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
     "vitepress": "^1.6.3",
-    "vitepress-openapi": "^0.0.3-alpha.75",
-    "vitepress-plugin-group-icons": "^1.5.1"
+    "vitepress-openapi": "^0.0.3-alpha.86",
+    "vitepress-plugin-group-icons": "^1.6.1"
   },
-  "packageManager": "pnpm@9.8.0"
+  "packageManager": "pnpm@9.15.9"
 }
