@@ -82,7 +82,7 @@ export default defineConfig({
       }
     ],
     footer: {
-      message: 'Contacto: <a mailto="contacto@criptoya.com" target="_blank" rel="noopener noreferrer">contacto@criptoya.com</a>',
+      message: 'Contacto: <a href="mailto:contacto@criptoya.com">contacto@criptoya.com</a>',
       copyright: 'Copyright © 2020-presente <a href="https://criptoya.com" target="_blank" rel="noopener noreferrer">CriptoYa</a>'
     },
   },
