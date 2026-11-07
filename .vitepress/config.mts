@@ -11,12 +11,12 @@ const sidebar = useSidebar({ spec })
 /**
  * Recursively adds a region prefix to all sidebar item links.
  * This ensures that sidebar navigation links include the correct region path.
- * 
+ *
  * @param {string} prefix - The region prefix to add (e.g., '/argentina')
  * @param {Object} items - The sidebar items object containing an items array
  * @param {Array} items.items - Array of sidebar item objects
  * @returns {Object} Modified items object with prefixed links
- * 
+ *
  * @example
  * // Input: prefix = '/argentina', items = { items: [{ link: '/api' }] }
  * // Output: { items: [{ link: '/argentina/api' }] }
