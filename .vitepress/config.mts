@@ -100,6 +100,17 @@ export default defineConfig({
     },
   },
 
+  /** Give each dynamic page its own <title> */
+  transformPageData(pageData) {
+    const pageTitle = pageData.params?.pageTitle
+
+    if (pageTitle) {
+      pageData.title = pageTitle
+      pageData.frontmatter ??= {}
+      pageData.frontmatter.title = pageTitle
+    }
+  },
+
   head: [
     // Google Fonts
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
