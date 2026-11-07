@@ -29,15 +29,14 @@
                         "schema": {
                             "type": "string",
                             "enum": [
-                                "bybitp2p",
-                                "eldoradop2p",
-                                "okexp2p",
-                                "binancep2p",
                                 "x4t",
-                                "bingxp2p",
-                                "coinexp2p"
+                                "binancep2p",
+                                "bybitp2p",
+                                "okexp2p",
+                                "eldoradop2p",
+                                "bingxp2p"
                             ],
-                            "example": "bybitp2p"
+                            "example": "x4t"
                         }
                     },
                     {

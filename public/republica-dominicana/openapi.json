@@ -29,14 +29,13 @@
                         "schema": {
                             "type": "string",
                             "enum": [
-                                "okexp2p",
                                 "bybitp2p",
+                                "okexp2p",
                                 "bitgetp2p",
                                 "binancep2p",
-                                "coinexp2p",
                                 "bingxp2p"
                             ],
-                            "example": "okexp2p"
+                            "example": "bybitp2p"
                         }
                     },
                     {

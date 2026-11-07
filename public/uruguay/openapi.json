@@ -30,12 +30,11 @@
                             "type": "string",
                             "enum": [
                                 "xapo",
-                                "okexp2p",
-                                "binancep2p",
                                 "ripio",
-                                "bitgetp2p",
+                                "binancep2p",
+                                "okexp2p",
                                 "bingxp2p",
-                                "coinexp2p",
+                                "bitgetp2p",
                                 "huobip2p"
                             ],
                             "example": "xapo"
