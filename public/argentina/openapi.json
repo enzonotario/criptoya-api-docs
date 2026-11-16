@@ -149,7 +149,7 @@
                     {
                         "name": "volumen",
                         "in": "path",
-                        "description": "Volumen a operar, utilizar el punto como separador decimal",
+                        "description": "Volumen (monto) a operar. Usar el punto como separador decimal. En los exchanges con orderbook se usa para calcular el precio unitario de una compra o venta por ese monto. Por ejemplo, `/api/btc/ars/1` pide el precio de comprar 1 Bitcoin y muchas veces no se puede calcular porque no hay liquidez suficiente. Cuando no se indica volumen, los valores por defecto son: BTC 0.01, ETH 0.2, stablecoins 500, SOL 1.5, BNB 0.5 y XRP 300. El resto ronda el equivalente a USD 100.",
                         "required": true,
                         "schema": {
                             "type": "number",
@@ -256,7 +256,7 @@
                     {
                         "name": "volumen",
                         "in": "path",
-                        "description": "Volumen a operar, utilizar el punto como separador decimal",
+                        "description": "Volumen (monto) a operar. Usar el punto como separador decimal. En los exchanges con orderbook se usa para calcular el precio unitario de una compra o venta por ese monto. Por ejemplo, `/api/btc/ars/1` pide el precio de comprar 1 Bitcoin y muchas veces no se puede calcular porque no hay liquidez suficiente. Cuando no se indica volumen, los valores por defecto son: BTC 0.01, ETH 0.2, stablecoins 500, SOL 1.5, BNB 0.5 y XRP 300. El resto ronda el equivalente a USD 100.",
                         "required": true,
                         "schema": {
                             "type": "number",
@@ -286,7 +286,7 @@
                 "tags": [
                     "Otros"
                 ],
-                "description": "Devuelve para cada exchange las criptomonedas con sus respectivas redes de retiro y la comisión para cada red.",
+                "description": "Devuelve para cada exchange las criptomonedas con sus respectivas redes de retiro, la comisión y el timestamp de última actualización. La estructura es exchange → moneda → red. `withdraw` es la comisión de retiro en unidades de esa criptomoneda. `time` es la última actualización.",
                 "responses": {
                     "200": {
                         "description": "Comisiones de retiro exitosas",
@@ -301,6 +301,60 @@
                 }
             }
         },
+        "/api/earn": {
+            "get": {
+                "operationId": "get-earn",
+                "summary": "Rendimientos DeFi / CeFi",
+                "tags": [
+                    "Otros"
+                ],
+                "description": "Muestra los rendimientos de plataformas CeFi y DeFi. El APY se actualiza cada 15 minutos.\n\nCada clave es el id del pool.\n\n- `name`: Nombre del protocolo o plataforma.\n- `pool`: Nombre del pool de inversión.\n- `coin`: Criptomoneda que se invierte.\n- `chain`: Blockchain en DeFi.\n- `assets`: Si el protocolo invierte en varios activos, se enumeran en esta propiedad.\n- `link`: Enlace a la plataforma o al pool.\n- `apy`: Último rendimiento. Se actualiza cada 15 minutos.\n- `time`: Última actualización, en segundos Unix.\n\n```json\n{\n  \"1529\": {\n    \"name\": \"Aave\",\n    \"pool\": null,\n    \"coin\": \"AVAX\",\n    \"assets\": null,\n    \"chain\": \"Avalanche\",\n    \"link\": \"https://app.aave.com/reserve-overview/?underlyingAsset=0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7&marketName=proto_avalanche_v3\",\n    \"apy\": 1.58,\n    \"time\": 1739731312\n  },\n  \"1535\": {\n    \"name\": \"Marinade\",\n    \"pool\": null,\n    \"coin\": \"SOL\",\n    \"assets\": null,\n    \"chain\": \"Solana\",\n    \"link\": \"https://marinade.finance/app/staking\",\n    \"apy\": 6.45,\n    \"time\": 1765609557\n  },\n  \"1580\": {\n    \"name\": \"Decrypto\",\n    \"pool\": null,\n    \"coin\": \"ETH\",\n    \"assets\": null,\n    \"chain\": \"CeFi\",\n    \"link\": \"https://www.decrypto.la/invertir\",\n    \"apy\": 3,\n    \"time\": 1765601575\n  }\n}\n```",
+                "responses": {
+                    "200": {
+                        "description": "Rendimientos",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/EarnPools"
+                                },
+                                "example": {
+                                    "1529": {
+                                        "name": "Aave",
+                                        "pool": null,
+                                        "coin": "AVAX",
+                                        "assets": null,
+                                        "chain": "Avalanche",
+                                        "link": "https://app.aave.com/reserve-overview/?underlyingAsset=0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7&marketName=proto_avalanche_v3",
+                                        "apy": 1.58,
+                                        "time": 1739731312
+                                    },
+                                    "1535": {
+                                        "name": "Marinade",
+                                        "pool": null,
+                                        "coin": "SOL",
+                                        "assets": null,
+                                        "chain": "Solana",
+                                        "link": "https://marinade.finance/app/staking",
+                                        "apy": 6.45,
+                                        "time": 1765609557
+                                    },
+                                    "1580": {
+                                        "name": "Decrypto",
+                                        "pool": null,
+                                        "coin": "ETH",
+                                        "assets": null,
+                                        "chain": "CeFi",
+                                        "link": "https://www.decrypto.la/invertir",
+                                        "apy": 3,
+                                        "time": 1765601575
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/api/dolar": {
             "get": {
                 "operationId": "get-dolar",
@@ -308,7 +362,7 @@
                 "tags": [
                     "Otros"
                 ],
-                "description": "Devuelve la cotización actual del dólar.",
+                "description": "Cotizaciones de los dólares en Argentina.\n\n- `mayorista`: Cotización del dólar Comunicación A 3500. Fuente: BCRA.\n- `oficial`: Cotización del dólar en los bancos. Fuente: BNA.\n- `cripto`: Dólar cripto: cotización implícita de comprar Bitcoin o USDT y vender contra dólar en un exchange del exterior. Fuente: CriptoYa.\n- `blue`: Dólar blue o informal. Fuente: Ámbito.\n- `mep`: Dólar MEP o bolsa: cotización implícita de comprar y vender bonos AL30D o GD30D. Fuente: BYMA.\n- `ccl`: Dólar CCL o contado con liquidación: cotización implícita de comprar y vender bonos AL30C o GD30C. Fuente: BYMA.",
                 "responses": {
                     "200": {
                         "description": "Cotización del dólar exitosa",
@@ -316,6 +370,66 @@
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/DollarQuotes"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/pix": {
+            "get": {
+                "operationId": "get-pix",
+                "summary": "Cotizaciones PIX",
+                "tags": [
+                    "Otros"
+                ],
+                "description": "Muestra precios para pagos con PIX. Verificar el atributo time para comprobar que el precio esté actualizado.\n\nCada clave es el proveedor. Adentro, cada clave es un par (por ejemplo `BRL-ARS`, `USD-BRL` o `USDT-BRL`).\n\n- `ask`: Precio de compra.\n- `bid`: Precio de venta.\n- `time`: Última actualización, en segundos Unix.\n\n```json\n{\n  \"fiwind\": {\n    \"BRL-ARS\": {\n      \"ask\": 311.913,\n      \"bid\": 290.039,\n      \"time\": 1777376928\n    },\n    \"USD-BRL\": {\n      \"ask\": 4.76,\n      \"bid\": 4.76,\n      \"time\": 1775638982\n    },\n    \"USDT-BRL\": {\n      \"ask\": 5.154,\n      \"bid\": 4.857,\n      \"time\": 1777376928\n    }\n  },\n  \"takenos\": {\n    \"USD-BRL\": {\n      \"ask\": 5.18,\n      \"bid\": 4.845,\n      \"time\": 1777376933\n    }\n  },\n  \"cocos\": {\n    \"BRL-ARS\": {\n      \"ask\": 306.015,\n      \"bid\": 306.015,\n      \"time\": 1777376928\n    },\n    \"USD-BRL\": {\n      \"ask\": 4.712,\n      \"bid\": 4.712,\n      \"time\": 1777376928\n    }\n  }\n}\n```",
+                "responses": {
+                    "200": {
+                        "description": "Cotizaciones PIX",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PixQuotes"
+                                },
+                                "example": {
+                                    "fiwind": {
+                                        "BRL-ARS": {
+                                            "ask": 311.913,
+                                            "bid": 290.039,
+                                            "time": 1777376928
+                                        },
+                                        "USD-BRL": {
+                                            "ask": 4.76,
+                                            "bid": 4.76,
+                                            "time": 1775638982
+                                        },
+                                        "USDT-BRL": {
+                                            "ask": 5.154,
+                                            "bid": 4.857,
+                                            "time": 1777376928
+                                        }
+                                    },
+                                    "takenos": {
+                                        "USD-BRL": {
+                                            "ask": 5.18,
+                                            "bid": 4.845,
+                                            "time": 1777376933
+                                        }
+                                    },
+                                    "cocos": {
+                                        "BRL-ARS": {
+                                            "ask": 306.015,
+                                            "bid": 306.015,
+                                            "time": 1777376928
+                                        },
+                                        "USD-BRL": {
+                                            "ask": 4.712,
+                                            "bid": 4.712,
+                                            "time": 1777376928
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -404,7 +518,7 @@
                     "totalAsk": {
                         "type": "number",
                         "format": "float",
-                        "description": "Precio de compra final incluyendo las comisiones de transferencia y trade"
+                        "description": "Precio de compra final incluyendo las comisiones de transferencia e intercambio. No se incluye la comisión de retiro (withdraw fee)."
                     },
                     "bid": {
                         "type": "number",
@@ -414,7 +528,7 @@
                     "totalBid": {
                         "type": "number",
                         "format": "float",
-                        "description": "Precio de venta final incluyendo las comisiones de transferencia y trade"
+                        "description": "Precio de venta final incluyendo las comisiones de transferencia e intercambio."
                     },
                     "time": {
                         "type": "integer",
@@ -5169,7 +5283,8 @@
                             "timestamp": {
                                 "type": "integer"
                             }
-                        }
+                        },
+                        "description": "Cotización del dólar Comunicación A 3500. Fuente: BCRA."
                     },
                     "oficial": {
                         "type": "object",
@@ -5183,7 +5298,8 @@
                             "timestamp": {
                                 "type": "integer"
                             }
-                        }
+                        },
+                        "description": "Cotización del dólar en los bancos. Fuente: BNA."
                     },
                     "ahorro": {
                         "type": "object",
@@ -5231,7 +5347,8 @@
                             "timestamp": {
                                 "type": "integer"
                             }
-                        }
+                        },
+                        "description": "Dólar blue o informal. Fuente: Ámbito."
                     },
                     "cripto": {
                         "type": "object",
@@ -5287,7 +5404,8 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "description": "Dólar cripto: cotización implícita de comprar Bitcoin o USDT y vender contra dólar en un exchange del exterior. Fuente: CriptoYa."
                     },
                     "mep": {
                         "type": "object",
@@ -5427,7 +5545,8 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "description": "Dólar MEP o bolsa: cotización implícita de comprar y vender bonos AL30D o GD30D. Fuente: BYMA."
                     },
                     "ccl": {
                         "type": "object",
@@ -5567,7 +5686,8 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "description": "Dólar CCL o contado con liquidación: cotización implícita de comprar y vender bonos AL30C o GD30C. Fuente: BYMA."
                     }
                 }
             },
@@ -6273,6 +6393,145 @@
                                 "type": "integer",
                                 "format": "int32"
                             }
+                        }
+                    }
+                }
+            },
+            "EarnPools": {
+                "type": "object",
+                "description": "Cada clave es el id del pool.",
+                "additionalProperties": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "Nombre del protocolo o plataforma."
+                        },
+                        "pool": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "Nombre del pool de inversión."
+                        },
+                        "coin": {
+                            "type": "string",
+                            "description": "Criptomoneda que se invierte."
+                        },
+                        "chain": {
+                            "type": "string",
+                            "description": "Blockchain en DeFi."
+                        },
+                        "assets": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "Si el protocolo invierte en varios activos, se enumeran en esta propiedad."
+                        },
+                        "link": {
+                            "type": "string",
+                            "description": "Enlace a la plataforma o al pool."
+                        },
+                        "apy": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Último rendimiento. Se actualiza cada 15 minutos."
+                        },
+                        "time": {
+                            "type": "integer",
+                            "description": "Última actualización, en segundos Unix."
+                        }
+                    }
+                },
+                "example": {
+                    "1529": {
+                        "name": "Aave",
+                        "pool": null,
+                        "coin": "AVAX",
+                        "assets": null,
+                        "chain": "Avalanche",
+                        "link": "https://app.aave.com/reserve-overview/?underlyingAsset=0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7&marketName=proto_avalanche_v3",
+                        "apy": 1.58,
+                        "time": 1739731312
+                    },
+                    "1535": {
+                        "name": "Marinade",
+                        "pool": null,
+                        "coin": "SOL",
+                        "assets": null,
+                        "chain": "Solana",
+                        "link": "https://marinade.finance/app/staking",
+                        "apy": 6.45,
+                        "time": 1765609557
+                    },
+                    "1580": {
+                        "name": "Decrypto",
+                        "pool": null,
+                        "coin": "ETH",
+                        "assets": null,
+                        "chain": "CeFi",
+                        "link": "https://www.decrypto.la/invertir",
+                        "apy": 3,
+                        "time": 1765601575
+                    }
+                }
+            },
+            "PixQuotes": {
+                "type": "object",
+                "description": "Cada clave es el proveedor.",
+                "additionalProperties": {
+                    "type": "object",
+                    "description": "Pares informados por el proveedor, por ejemplo BRL-ARS, USD-BRL o USDT-BRL.",
+                    "additionalProperties": {
+                        "type": "object",
+                        "properties": {
+                            "ask": {
+                                "type": "number",
+                                "description": "Precio de compra."
+                            },
+                            "bid": {
+                                "type": "number",
+                                "description": "Precio de venta."
+                            },
+                            "time": {
+                                "type": "integer",
+                                "description": "Última actualización, en segundos Unix. Verificar para comprobar que el precio esté actualizado."
+                            }
+                        }
+                    }
+                },
+                "example": {
+                    "fiwind": {
+                        "BRL-ARS": {
+                            "ask": 311.913,
+                            "bid": 290.039,
+                            "time": 1777376928
+                        },
+                        "USD-BRL": {
+                            "ask": 4.76,
+                            "bid": 4.76,
+                            "time": 1775638982
+                        },
+                        "USDT-BRL": {
+                            "ask": 5.154,
+                            "bid": 4.857,
+                            "time": 1777376928
+                        }
+                    },
+                    "takenos": {
+                        "USD-BRL": {
+                            "ask": 5.18,
+                            "bid": 4.845,
+                            "time": 1777376933
+                        }
+                    },
+                    "cocos": {
+                        "BRL-ARS": {
+                            "ask": 306.015,
+                            "bid": 306.015,
+                            "time": 1777376928
+                        },
+                        "USD-BRL": {
+                            "ask": 4.712,
+                            "bid": 4.712,
+                            "time": 1777376928
                         }
                     }
                 }

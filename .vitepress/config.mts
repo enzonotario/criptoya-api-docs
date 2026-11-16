@@ -40,6 +40,7 @@ const operationsOnlyArgentina = [
   "get-cer",
   "get-uva",
   "get-bancostodos",
+  "get-pix",
 ]
 
 const sidebarItems = collect(regions)
