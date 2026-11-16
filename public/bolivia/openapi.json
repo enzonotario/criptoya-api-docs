@@ -118,7 +118,7 @@
                         "name": "volumen",
                         "in": "path",
                         "description": "Volumen (monto) a operar. Usar el punto como separador decimal. En los exchanges con orderbook se usa para calcular el precio unitario de una compra o venta por ese monto. Por ejemplo, `/api/btc/ars/1` pide el precio de comprar 1 Bitcoin y muchas veces no se puede calcular porque no hay liquidez suficiente. Cuando no se indica volumen, los valores por defecto son: BTC 0.01, ETH 0.2, stablecoins 500, SOL 1.5, BNB 0.5 y XRP 300. El resto ronda el equivalente a USD 100.",
-                        "required": true,
+                        "required": false,
                         "schema": {
                             "type": "number",
                             "format": "float",
@@ -225,7 +225,7 @@
                         "name": "volumen",
                         "in": "path",
                         "description": "Volumen (monto) a operar. Usar el punto como separador decimal. En los exchanges con orderbook se usa para calcular el precio unitario de una compra o venta por ese monto. Por ejemplo, `/api/btc/ars/1` pide el precio de comprar 1 Bitcoin y muchas veces no se puede calcular porque no hay liquidez suficiente. Cuando no se indica volumen, los valores por defecto son: BTC 0.01, ETH 0.2, stablecoins 500, SOL 1.5, BNB 0.5 y XRP 300. El resto ronda el equivalente a USD 100.",
-                        "required": true,
+                        "required": false,
                         "schema": {
                             "type": "number",
                             "format": "float",
