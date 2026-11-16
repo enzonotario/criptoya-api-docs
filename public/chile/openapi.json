@@ -32,14 +32,14 @@
                                 "satoshitango",
                                 "xapo",
                                 "cryptomkt",
-                                "binancep2p",
                                 "buda",
-                                "cryptomktpro",
-                                "okexp2p",
+                                "bingxp2p",
                                 "vitawallet",
-                                "bitgetp2p",
                                 "bybitp2p",
-                                "bingxp2p"
+                                "cryptomktpro",
+                                "binancep2p",
+                                "okexp2p",
+                                "bitgetp2p"
                             ],
                             "example": "satoshitango"
                         }
@@ -5094,6 +5094,7 @@
                 "type": "object",
                 "properties": {
                     "mayorista": {
+                        "description": "Cotización del dólar Comunicación A 3500. Fuente: BCRA.",
                         "type": "object",
                         "properties": {
                             "price": {
@@ -5105,10 +5106,10 @@
                             "timestamp": {
                                 "type": "integer"
                             }
-                        },
-                        "description": "Cotización del dólar Comunicación A 3500. Fuente: BCRA."
+                        }
                     },
                     "oficial": {
+                        "description": "Cotización del dólar en los bancos. Fuente: BNA.",
                         "type": "object",
                         "properties": {
                             "price": {
@@ -5120,8 +5121,7 @@
                             "timestamp": {
                                 "type": "integer"
                             }
-                        },
-                        "description": "Cotización del dólar en los bancos. Fuente: BNA."
+                        }
                     },
                     "ahorro": {
                         "type": "object",
@@ -5155,6 +5155,7 @@
                         }
                     },
                     "blue": {
+                        "description": "Dólar blue o informal. Fuente: Ámbito.",
                         "type": "object",
                         "properties": {
                             "ask": {
@@ -5169,10 +5170,10 @@
                             "timestamp": {
                                 "type": "integer"
                             }
-                        },
-                        "description": "Dólar blue o informal. Fuente: Ámbito."
+                        }
                     },
                     "cripto": {
+                        "description": "Dólar cripto: cotización implícita de comprar Bitcoin o USDT y vender contra dólar en un exchange del exterior. Fuente: CriptoYa.",
                         "type": "object",
                         "properties": {
                             "ccb": {
@@ -5226,10 +5227,10 @@
                                     }
                                 }
                             }
-                        },
-                        "description": "Dólar cripto: cotización implícita de comprar Bitcoin o USDT y vender contra dólar en un exchange del exterior. Fuente: CriptoYa."
+                        }
                     },
                     "mep": {
+                        "description": "Dólar MEP o bolsa: cotización implícita de comprar y vender bonos AL30D o GD30D. Fuente: BYMA.",
                         "type": "object",
                         "properties": {
                             "al30": {
@@ -5367,10 +5368,10 @@
                                     }
                                 }
                             }
-                        },
-                        "description": "Dólar MEP o bolsa: cotización implícita de comprar y vender bonos AL30D o GD30D. Fuente: BYMA."
+                        }
                     },
                     "ccl": {
+                        "description": "Dólar CCL o contado con liquidación: cotización implícita de comprar y vender bonos AL30C o GD30C. Fuente: BYMA.",
                         "type": "object",
                         "properties": {
                             "al30": {
@@ -5508,8 +5509,7 @@
                                     }
                                 }
                             }
-                        },
-                        "description": "Dólar CCL o contado con liquidación: cotización implícita de comprar y vender bonos AL30C o GD30C. Fuente: BYMA."
+                        }
                     }
                 }
             },
