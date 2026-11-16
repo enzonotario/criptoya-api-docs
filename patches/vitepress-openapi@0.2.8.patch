@@ -1,0 +1,53 @@
+diff --git a/dist/useOpenapi-tKaw3COz.js b/dist/useOpenapi-tKaw3COz.js
+index f1e5aa39343ef55d34b4ef10deeda36dbb358d9d..20ae4b72d932b32874fb55e90a2780bd427c96a5 100644
+--- a/dist/useOpenapi-tKaw3COz.js
++++ b/dist/useOpenapi-tKaw3COz.js
+@@ -3999,7 +3999,7 @@ function ho(e, t, n = "") {
+ 	let r = n;
+ 	return mo(e, t, (e, t) => {
+ 		r = r.replace(`{${e}}`, t);
+-	}), r;
++	}), r.replace(/\/\{[^/{}]+\}/g, "");
+ }
+ function go(e, t, n, r) {
+ 	let i = new Headers();
+diff --git a/dist/vitepress-openapi.client.es.js b/dist/vitepress-openapi.client.es.js
+index 7f34dfc098d7f9148d8073f6a2cb594d00bb2a1b..c1c7d6bc255a9c24c2b37ecba652a52dac0342f5 100644
+--- a/dist/vitepress-openapi.client.es.js
++++ b/dist/vitepress-openapi.client.es.js
+@@ -51158,7 +51158,7 @@ var I3 = "JsonEditorVue", L3 = [
+ 				contentType: d.value,
+ 				headers: { ...re().getCodeSamplesDefaultHeaders() || {} }
+ 			});
+-		}, { deep: !0 }), lt(u, (e) => {
++		}, { deep: !0, immediate: !0 }), lt(u, (e) => {
+ 			var t;
+ 			let r = n.securityUi.find((t) => t.id === e), i = (r == null ? void 0 : r.schemes) || ((t = n.securityUi) == null || (t = t[0]) == null ? void 0 : t.schemes) || {};
+ 			if (!i || !Object.keys(i).length) {
+diff --git a/src/components/Playground/OAPlaygroundParameters.vue b/src/components/Playground/OAPlaygroundParameters.vue
+index c06112c450a35526f4496d1197891840d1839146..b82a1e5c1c365ac403fd2be356503bfce92d56f5 100644
+--- a/src/components/Playground/OAPlaygroundParameters.vue
++++ b/src/components/Playground/OAPlaygroundParameters.vue
+@@ -191,7 +191,7 @@ watch([variables, authorizations, body, selectedServer, enabledParameters], () =
+       ...(useTheme().getCodeSamplesDefaultHeaders() || {}),
+     },
+   })
+-}, { deep: true })
++}, { deep: true, immediate: true })
+ 
+ watch(selectedSchemeId, (schemeId) => {
+   const selectedScheme = props.securityUi.find((scheme: SecurityUiItem) => scheme.id === schemeId)
+diff --git a/src/lib/codeSamples/buildRequest.ts b/src/lib/codeSamples/buildRequest.ts
+index fd9758ebaec1249a6b8df72604c54542026fc9cc..83d4c1d30c4d6985b984d50e51cdf6211cfa56d3 100644
+--- a/src/lib/codeSamples/buildRequest.ts
++++ b/src/lib/codeSamples/buildRequest.ts
+@@ -54,7 +54,8 @@ function getPath(variables: Record<string, ParameterValue>, pathParameters: Open
+   processParameters(variables, pathParameters, (key, value) => {
+     resolvedPath = resolvedPath.replace(`{${key}}`, value)
+   })
+-  return resolvedPath
++  // An unchecked path parameter is omitted. Drop its segment instead of leaving `{name}`.
++  return resolvedPath.replace(/\/\{[^/{}]+\}/g, '')
+ }
+ 
+ function getHeaders(

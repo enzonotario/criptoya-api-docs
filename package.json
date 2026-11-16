@@ -22,5 +22,10 @@
     "vitepress-openapi": "^0.2.8",
     "vitepress-plugin-group-icons": "^1.6.1"
   },
-  "packageManager": "pnpm@9.15.9"
+  "packageManager": "pnpm@9.15.9",
+  "pnpm": {
+    "patchedDependencies": {
+      "vitepress-openapi@0.2.8": "patches/vitepress-openapi@0.2.8.patch"
+    }
+  }
 }
