@@ -159,9 +159,6 @@ export default defineConfig({
         '@': fileURLToPath(new URL('./', import.meta.url)),
       },
     },
-    ssr: {
-      noExternal: ['vitepress-openapi'],
-    },
     plugins: [
       llmsDevServer(llms),
       groupIconVitePlugin({
