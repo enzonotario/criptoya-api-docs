@@ -29,16 +29,17 @@
                         "schema": {
                             "type": "string",
                             "enum": [
-                                "binancep2p",
-                                "vitawallet",
                                 "mexcp2p",
-                                "bybitp2p",
-                                "saldo",
-                                "bitgetp2p",
                                 "vibrant",
+                                "bybitp2p",
+                                "binancep2p",
+                                "saldo",
+                                "vitawallet",
+                                "bitgetp2p",
+                                "eldoradop2p",
                                 "xapo"
                             ],
-                            "example": "binancep2p"
+                            "example": "mexcp2p"
                         }
                     },
                     {

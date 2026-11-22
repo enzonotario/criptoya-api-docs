@@ -31,8 +31,8 @@
                             "enum": [
                                 "xapo",
                                 "ripio",
-                                "binancep2p",
                                 "okexp2p",
+                                "binancep2p",
                                 "huobip2p",
                                 "bitgetp2p",
                                 "bingxp2p"
