@@ -1,26 +1,26 @@
-diff --git a/dist/useOpenapi-tKaw3COz.js b/dist/useOpenapi-tKaw3COz.js
-index f1e5aa39343ef55d34b4ef10deeda36dbb358d9d..20ae4b72d932b32874fb55e90a2780bd427c96a5 100644
---- a/dist/useOpenapi-tKaw3COz.js
-+++ b/dist/useOpenapi-tKaw3COz.js
-@@ -3999,7 +3999,7 @@ function ho(e, t, n = "") {
+diff --git a/dist/normalizeExamples-BFR42ENV.js b/dist/normalizeExamples-BFR42ENV.js
+index 6dffe00708569d35ebcfa33a33fc06ab45bea01a..f6e662095ecfcc9ed35718b42c66d660d111ecd5 100644
+--- a/dist/normalizeExamples-BFR42ENV.js
++++ b/dist/normalizeExamples-BFR42ENV.js
+@@ -819,7 +819,7 @@ function It(e, t, n = "") {
  	let r = n;
- 	return mo(e, t, (e, t) => {
+ 	return Ft(e, t, (e, t) => {
  		r = r.replace(`{${e}}`, t);
 -	}), r;
 +	}), r.replace(/\/\{[^/{}]+\}/g, "");
  }
- function go(e, t, n, r) {
+ function Lt(e, t, n, r) {
  	let i = new Headers();
-diff --git a/dist/vitepress-openapi.client.es.js b/dist/vitepress-openapi.client.es.js
-index 7f34dfc098d7f9148d8073f6a2cb594d00bb2a1b..c1c7d6bc255a9c24c2b37ecba652a52dac0342f5 100644
---- a/dist/vitepress-openapi.client.es.js
-+++ b/dist/vitepress-openapi.client.es.js
-@@ -51158,7 +51158,7 @@ var I3 = "JsonEditorVue", L3 = [
- 				contentType: d.value,
- 				headers: { ...re().getCodeSamplesDefaultHeaders() || {} }
+diff --git a/dist/vue-DIM9jH1x.js b/dist/vue-DIM9jH1x.js
+index 81b0f9e93916bcae5f9eeebee76987f5b92181f3..fa30d0cd3b740365ad7dc297104d2c6b4d56e10c 100644
+--- a/dist/vue-DIM9jH1x.js
++++ b/dist/vue-DIM9jH1x.js
+@@ -11860,7 +11860,7 @@ var qf = F({ setup() {
+ 				contentType: f.value,
+ 				headers: { ...E().getCodeSamplesDefaultHeaders() || {} }
  			});
--		}, { deep: !0 }), lt(u, (e) => {
-+		}, { deep: !0, immediate: !0 }), lt(u, (e) => {
+-		}, { deep: !0 }), K(d, (e) => {
++		}, { deep: !0, immediate: !0 }), K(d, (e) => {
  			var t;
  			let r = n.securityUi.find((t) => t.id === e), i = (r == null ? void 0 : r.schemes) || ((t = n.securityUi) == null || (t = t[0]) == null ? void 0 : t.schemes) || {};
  			if (!i || !Object.keys(i).length) {
@@ -38,11 +38,11 @@ index c06112c450a35526f4496d1197891840d1839146..b82a1e5c1c365ac403fd2be356503bfc
  watch(selectedSchemeId, (schemeId) => {
    const selectedScheme = props.securityUi.find((scheme: SecurityUiItem) => scheme.id === schemeId)
 diff --git a/src/lib/codeSamples/buildRequest.ts b/src/lib/codeSamples/buildRequest.ts
-index fd9758ebaec1249a6b8df72604c54542026fc9cc..83d4c1d30c4d6985b984d50e51cdf6211cfa56d3 100644
+index 7ff38c4c792cd14befd7b3f0c29daa9849012d31..15194925093e7042b9aa98ae1a2bed7ef3de19c7 100644
 --- a/src/lib/codeSamples/buildRequest.ts
 +++ b/src/lib/codeSamples/buildRequest.ts
-@@ -54,7 +54,8 @@ function getPath(variables: Record<string, ParameterValue>, pathParameters: Open
-   processParameters(variables, pathParameters, (key, value) => {
+@@ -53,7 +53,8 @@ function getPath(valueOf: ParameterValueResolver, pathParameters: OpenAPIV3.Para
+   processParameters(valueOf, pathParameters, (key, value) => {
      resolvedPath = resolvedPath.replace(`{${key}}`, value)
    })
 -  return resolvedPath

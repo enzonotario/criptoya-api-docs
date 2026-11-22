@@ -1,12 +1,19 @@
 import { URL, fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
-import { useSidebar } from 'vitepress-openapi'
+import { generateLlmsFiles, llmsDevServer, useSidebar } from 'vitepress-openapi'
 import { collect } from 'collect.js'
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import regions from './regions.json' with { type: 'json' }
 import spec from '../public/argentina/openapi.json' with { type: 'json' }
 
 const sidebar = useSidebar({ spec })
+
+const llms = regions.map(region => ({
+  specPath: fileURLToPath(new URL(`../public/${region.slug}/openapi.json`, import.meta.url)),
+  operationRoute: `${region.slug}/operations/{operationId}`,
+  introductionRoute: `${region.slug}/index`,
+  openapiUrl: `/${region.slug}/openapi.json`,
+}))
 
 /**
  * Recursively adds a region prefix to all sidebar item links.
@@ -112,6 +119,10 @@ export default defineConfig({
     }
   },
 
+  async buildEnd(siteConfig) {
+    await generateLlmsFiles(siteConfig, llms)
+  },
+
   head: [
     // Google Fonts
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
@@ -148,7 +159,11 @@ export default defineConfig({
         '@': fileURLToPath(new URL('./', import.meta.url)),
       },
     },
+    ssr: {
+      noExternal: ['vitepress-openapi'],
+    },
     plugins: [
+      llmsDevServer(llms),
       groupIconVitePlugin({
         customIcon: {
           curl: 'simple-icons:curl', // Custom icon for curl.
