@@ -19,13 +19,8 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
     "vitepress": "^1.6.4",
-    "vitepress-openapi": "^0.2.18",
+    "vitepress-openapi": "^0.2.19",
     "vitepress-plugin-group-icons": "^1.6.1"
   },
-  "packageManager": "pnpm@9.15.9",
-  "pnpm": {
-    "patchedDependencies": {
-      "vitepress-openapi@0.2.18": "patches/vitepress-openapi@0.2.18.patch"
-    }
-  }
+  "packageManager": "pnpm@9.15.9"
 }
